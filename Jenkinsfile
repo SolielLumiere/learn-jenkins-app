@@ -14,7 +14,7 @@ pipeline {
         stage("Build"){
             steps{
                 sh '''
-                    la -a 
+                    ls -a 
                 '''
             }
         }
