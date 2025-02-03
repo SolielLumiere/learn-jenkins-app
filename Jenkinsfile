@@ -5,7 +5,7 @@ pipeline {
         
         stage('Test necesary tools') {
             steps {
-                clearWs()
+                cleanWs()
                 sh '''
                     npm --version
                     git --version
