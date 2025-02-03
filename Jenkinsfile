@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+        cleanWs()
         stage('Test necesary tools') {
             steps {
                 sh '''
@@ -15,6 +16,10 @@ pipeline {
             steps{
                 sh '''
                     ls -a 
+                    node --version
+                    npm --version
+                    npm install
+                    npm run build
                 '''
             }
         }
