@@ -2,8 +2,9 @@ pipeline {
     agent any
 
     stages {
-        cleanWs()
+        
         stage('Test necesary tools') {
+            clearWs()
             steps {
                 sh '''
                     npm --version
